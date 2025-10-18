@@ -1,8 +1,9 @@
-h3 {
+h2 {
     background-color: aquamarine;
     font-style: arial;
+    text-align: center;
 }
-
 p {
     color: brown;
+    size: 12px;
 }

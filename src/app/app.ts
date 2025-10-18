@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MensajeComponent } from './mensaje/mensaje';
+import { ObjetoComponent } from './objeto/objeto';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [RouterOutlet, MensajeComponent, ObjetoComponent],
 })
 export class App {
   protected readonly title = signal('ProyectoFinal');
 }
+

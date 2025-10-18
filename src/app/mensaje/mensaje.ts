@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './mensaje.html',
   styleUrls: ['./mensaje.css']
 })
-export class Mensaje {
+export class MensajeComponent {
   mensaje1: string = 'Este es el componente "Mensaje"';
   mensaje2: string = 'Este no se muestra';
   mostrar: boolean = false;
