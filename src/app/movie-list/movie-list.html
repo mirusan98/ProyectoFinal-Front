@@ -2,7 +2,7 @@
 Para cada película, incluir el selector del componente hijo <app-movie-item> y pasarle los datos de la película mediante property binding con [movie]="movie".
 Escuchar el evento emitido por el hijo con event binding, ej.: (movieSelected)="onMovieSelected($event)".
 Mostrar en un <p> la película seleccionada interpolando la variable selectedMovie. -->
-<div>
+<!-- <div>
   <h2>Lista de Películas</h2>
   <ul>
     <li *ngFor="let movie of movies">
@@ -13,4 +13,25 @@ Mostrar en un <p> la película seleccionada interpolando la variable selectedMov
     <h3>Película Seleccionada:</h3>
     <p>{{ selectedMovie }}</p>
   </div>
-</div>
+</div> -->
+
+<section class="movies-container">
+  <h2>Lista de películas</h2>
+
+  <div class="grid">
+    <app-movie-item
+      *ngFor="let movie of movies"
+      [movie]="movie"
+      (movieSelected)="onMovieSelected($event)">
+    </app-movie-item>
+  </div>
+
+  <div class="selected">
+    <h3 *ngIf="selectedMovie; else noSelected">
+      <p class="selectBold">{{ selectedMovie }}</p>
+    </h3>
+    <ng-template #noSelected>
+      <p>Hay que seleccionar una pelicula</p>
+    </ng-template>
+  </div>
+</section>

@@ -1,9 +1,17 @@
-<!-- Mostrar el título (title), año (year) y descripción (description) de la película usando interpolación.
-Usar *ngIf para mostrar solo las descripciones que no estén vacías.
-Agregar un botón "Seleccionar" que, al hacer clic, dispare el método selectMovie().
- -->
-<div class="movie-item">
+<!-- <div class="movie-item">
   <h3>{{ movie.title }} ({{ movie.year }})</h3>
   <p *ngIf="movie.description">{{ movie.description }}</p>
   <button (click)="selectMovie()">Seleccionar</button>
-</div>
+</div> -->
+<article class="card">
+  <div class="card-body">
+    <h3 class="movie-title">{{ movie.title }}</h3>
+    <p class="movie-year">{{ movie.year }}</p>
+
+    <p class="movie-description" *ngIf="movie?.description && movie.description.trim().length > 0">
+      {{ movie.description }}
+    </p>
+
+    <button class="select-btn" (click)="selectMovie()">Seleccionar</button>
+  </div>
+</article>

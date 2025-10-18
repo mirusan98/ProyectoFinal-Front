@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
-import { MovieItem } from '../movie-item/movie-item';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Movie } from '../models/movies';
+import { MovieItemComponent } from '../movie-item/movie-item';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-movie-list',
-  imports: [MovieItem, CommonModule],
+  imports: [CommonModule, MovieItemComponent, NgIf],
   templateUrl: './movie-list.html',
   styleUrl: './movie-list.css'
 })
 
-export class MovieList {
-  movies = [
+export class MovieListComponent implements OnInit {
+  movies: Movie[] = [];
+  selectedMovie: string = '';
+  constructor() {};
+  ngOnInit(): void {
+    this.movies =  [
     { title: 'El Padrino', year: 1972, description: 'La historia de la familia mafiosa Corleone.' },
     { title: 'Forrest Gump', year: 1994, description: 'La vida extraordinaria de un hombre común.' },
     { title: 'Inception', year: 2010, description: 'Un ladrón que roba secretos a través de los sueños.' },
@@ -21,11 +27,9 @@ export class MovieList {
     { title: 'Avatar', year: 2009, description: 'La lucha por Pandora entre humanos y nativos.' },
     { title: 'Jurassic Park', year: 1993, description: 'Un parque temático con dinosaurios clonados.' },
     { title: 'Matrix', year: 1999, description: 'La realidad es una simulación controlada por máquinas.' }
-  ];
-  selectedMovie: string = '';
-  onMovieSelected(movieTitle: string) {
+  ];}
+  onMovieSelected(movieTitle: string): void {
     this.selectedMovie = movieTitle;
-  }
+  };
   
-
 }
