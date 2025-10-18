@@ -12,11 +12,12 @@ export class Mensaje {
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-mensaje',
+  imports: [CommonModule, NgIf],
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './mensaje.html',
   styleUrls: ['./mensaje.css']
 })

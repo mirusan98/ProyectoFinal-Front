@@ -1,0 +1,16 @@
+<!-- Usar *ngFor para iterar sobre la lista de películas.
+Para cada película, incluir el selector del componente hijo <app-movie-item> y pasarle los datos de la película mediante property binding con [movie]="movie".
+Escuchar el evento emitido por el hijo con event binding, ej.: (movieSelected)="onMovieSelected($event)".
+Mostrar en un <p> la película seleccionada interpolando la variable selectedMovie. -->
+<div>
+  <h2>Lista de Películas</h2>
+  <ul>
+    <li *ngFor="let movie of movies">
+      <app-movie-item [movie]="movie" (movieSelected)="onMovieSelected($event)"></app-movie-item>
+    </li>
+  </ul>
+  <div *ngIf="selectedMovie">
+    <h3>Película Seleccionada:</h3>
+    <p>{{ selectedMovie }}</p>
+  </div>
+</div>
