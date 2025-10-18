@@ -3,12 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { MensajeComponent } from './mensaje/mensaje';
 import { ObjetoComponent } from './objeto/objeto';
 import { ArregloComponent } from './arreglo/arreglo';
+import { HeaderComponent } from './header/header';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  imports: [RouterOutlet, MensajeComponent, ObjetoComponent, ArregloComponent],
+  imports: [RouterOutlet, MensajeComponent, ObjetoComponent, ArregloComponent, HeaderComponent],
 })
 export class App {
   protected readonly title = signal('ProyectoFinal');
