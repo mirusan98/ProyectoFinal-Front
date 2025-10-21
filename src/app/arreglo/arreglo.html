@@ -1,6 +1,22 @@
-<h3>Detalles del pedido</h3>
-<ul>
-  <li *ngFor="let p of Pedido">
-    ID: {{p.id}} - Producto: {{p.producto}} - Cantidad: {{p.cantidad}} - Precio: {{p.precio}}
-  </li>
-  </ul>
+<h3>Listado de pedidos</h3>
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Precio</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pedidos">
+      <td>{{ p.id }}</td>
+      <td>{{ p.producto }}</td>
+      <td>{{ p.cantidad }}</td>
+      <td>{{ p.precio | currency:'ARS':'symbol' }}</td>
+      <td>{{ p.cantidad * p.precio | currency:'ARS':'symbol' }}</td>
+    </tr>
+  </tbody>
+</table>
