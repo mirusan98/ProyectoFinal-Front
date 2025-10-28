@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, output } from '@angular/core';
+import { Component, OnInit, output } from '@angular/core';
 import { Movie } from '../models/movies';
 import { MovieService } from '../services/movie';
 import { MovieItemComponent } from "../movie-item/movie-item";
@@ -13,7 +13,7 @@ import { NgIf, NgFor } from '@angular/common';
 })
 export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
-  @output() movieSelected = new EventEmitter<Movie>();
+  movieSelected = output<Movie>();
 
 
   constructor(private movieService: MovieService) {}

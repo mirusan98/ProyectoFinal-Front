@@ -18,7 +18,7 @@ Mostrar en un <p> la película seleccionada interpolando la variable selectedMov
 <section class="movies-container">
   <h2>Lista de películas</h2>
 
-  <div *ngIf="movies && movies.length > 0; else noMovies">
+  <div *ngIf="movies && movies.length > 0">
     <app-movie-item
       *ngFor="let movie of movies"
       [movie]="movie"
