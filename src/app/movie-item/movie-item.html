@@ -3,7 +3,7 @@
   <p *ngIf="movie.description">{{ movie.description }}</p>
   <button (click)="selectMovie()">Seleccionar</button>
 </div> -->
-<article class="card">
+<article class="card" *ngIf="movie">
   <div class="card-body">
     <h3 class="movie-title">{{ movie.title }}</h3>
     <p class="movie-year">{{ movie.year }}</p>

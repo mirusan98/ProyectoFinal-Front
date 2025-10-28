@@ -19,9 +19,8 @@ export class MovieItemComponent {
   // Con el !, le dices a TypeScript: “confía en mí, Angular asignará esta propiedad antes de usarla”.
   @Output() movieSelected = new EventEmitter<string>();
   selectMovie(): void {
-    if (this.movie && this.movie.title) {
       this.movieSelected.emit(this.movie.title);
-    }
+    
   }
 
 

@@ -3,6 +3,8 @@ import { Ejercicios } from './ejercicios/ejercicios';
 import { Movies } from './movies/movies';
 
 export const routes: Routes = [
-    { path: 'peliculas', component: Movies },
+  
+  { path: '', redirectTo: '/pelis', pathMatch: 'full' },
+    { path: 'pelis', component: Movies },
   { path: 'ejercicios', component: Ejercicios }
 ];
