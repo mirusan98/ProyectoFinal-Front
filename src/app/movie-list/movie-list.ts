@@ -13,7 +13,7 @@ import { NgIf, NgFor } from '@angular/common';
 })
 export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
-  movieSelected = output<Movie>();
+  movieSelected: string = '';
 
 
   constructor(private movieService: MovieService) {}
@@ -22,11 +22,11 @@ export class MovieListComponent implements OnInit {
     // Llama a las películas desde el servicio
      console.log('🔹 ngOnInit ejecutado');
     this.movies = this.movieService.getMovies();
-    console.log('🎬 Películas cargadas:', this.movies);
+    console.log('Películas cargadas:', this.movies);
   }
 
   onMovieSelected(movie: Movie) {
-    this.movieSelected.emit(movie);
+    this.movieSelected = movie.title;
   }
 
  /*  trackByTitle(index: number, item: Movie): string {

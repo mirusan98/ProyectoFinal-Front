@@ -3,12 +3,12 @@
   <p *ngIf="movie.description">{{ movie.description }}</p>
   <button (click)="selectMovie()">Seleccionar</button>
 </div> -->
-<article class="card" *ngIf="movie">
+<article class="card">
   <div class="card-body">
     <h3 class="movie-title">{{ movie.title }}</h3>
     <p class="movie-year">{{ movie.year }}</p>
 
-    <p class="movie-description" *ngIf="movie?.description && movie.description.trim().length > 0">
+    <p class="movie-description" *ngIf="movie.description">
       {{ movie.description }}
     </p>
 

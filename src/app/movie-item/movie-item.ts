@@ -15,8 +15,7 @@ import { NgIf } from '@angular/common';
 export class MovieItemComponent {
 
   @Input() movie!: Movie; 
-  // todas las propiedades deben inicializarse en el constructor o marcarse como opcionales porque TypeScript tiene activado el modo estricto
-  // Con el !, le dices a TypeScript: “confía en mí, Angular asignará esta propiedad antes de usarla”.
+  // TypeScript tiene activado el modo estricto por eso tiene que ir el !, como asegurando que se va a asignar antes de usarla.
   @Output() movieSelected = new EventEmitter<string>();
   selectMovie(): void {
       this.movieSelected.emit(this.movie.title);
