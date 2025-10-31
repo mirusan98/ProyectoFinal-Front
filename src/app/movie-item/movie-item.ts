@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Movie } from '../models/movies';
-import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-movie-item',
-  imports: [CommonModule, NgIf],
+  imports: [CommonModule],
   templateUrl: './movie-item.html',
   styleUrl: './movie-item.css'
 })

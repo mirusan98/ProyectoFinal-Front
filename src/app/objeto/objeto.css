@@ -1,9 +1,7 @@
-h2 {
-    background-color: aquamarine;
-    font-style: arial;
-    text-align: center;
+h3 {
+  color: #1565c0;
 }
-p {
-    color: brown;
-    size: 12px;
+
+ul li {
+  padding-left: 10px;
 }

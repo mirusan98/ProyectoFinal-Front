@@ -1,8 +1,8 @@
 h3 {
-    background-color: aquamarine;
-    font-style: arial;
+  color: #2e7d32;
 }
 
 p {
-    color: brown;
+  color: #555;
+  font-style: italic;
 }

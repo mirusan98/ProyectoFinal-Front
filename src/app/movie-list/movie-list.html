@@ -13,7 +13,9 @@ Mostrar en un <p> la película seleccionada interpolando la variable selectedMov
     <h3>Película Seleccionada:</h3>
     <p>{{ selectedMovie }}</p>
   </div>
-</div> -->
+</div>
+ -->
+
 
 <section class="movies-container">
   <h2>Lista de películas</h2>
@@ -27,7 +29,7 @@ Mostrar en un <p> la película seleccionada interpolando la variable selectedMov
 <!--para mostrar las pelis-->
   <div class="selected">
     <h3 *ngIf="movieSelected">
-      <p class="selectBold">{{ movieSelected }}</p>
+      <p class="selectBold"> Se selecciono: {{ movieSelected }}</p>
     </h3>
     <h3 *ngIf="!movieSelected">
       <p>Hay que seleccionar una pelicula</p>
